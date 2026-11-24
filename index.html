@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chetan Sawale — Data Analyst</title>
+<meta name="description" content="Chetan Sawale, Data Analyst in Mumbai. SQL, Python, Excel and Power BI projects with verified results: churn prediction, conversion analysis, retail analytics and demand forecasting.">
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --faint:#64748b; --line:#e2e8f0;
+    --bg:#ffffff; --soft:#f8fafc; --card:#ffffff;
+    --accent:#1d4ed8; --accent-soft:#dbeafe; --green:#15803d; --green-soft:#dcfce7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);z-index:10}
+  nav{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .brand{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.02em}
+  nav .brand span{color:var(--accent)}
+  nav ul{display:flex;gap:24px;list-style:none}
+  nav ul a{color:var(--muted);font-size:15px}
+  nav ul a:hover{color:var(--ink)}
+  section{padding:64px 0}
+  h1{font-size:44px;line-height:1.15;letter-spacing:-.03em}
+  h2{font-size:26px;letter-spacing:-.02em;margin-bottom:8px}
+  h3{font-size:19px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:17px;max-width:640px}
+  .hero{padding:80px 0 56px}
+  .eyebrow{display:inline-block;background:var(--green-soft);color:var(--green);font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px;margin-bottom:18px}
+  .hero p.lede{color:var(--muted);font-size:18px;max-width:660px;margin:16px 0 24px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--muted);background:#fff}
+  .chip b{color:var(--ink);font-weight:600}
+  .chip a{color:var(--muted)}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:11px 22px;border-radius:8px;margin-right:12px}
+  .btn:hover{text-decoration:none;opacity:.92}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+  .stat{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .stat .num{font-size:28px;font-weight:800;letter-spacing:-.02em}
+  .stat .lbl{color:var(--muted);font-size:14px;margin-top:2px}
+  .section-head{margin-bottom:28px}
+  .section-head p{color:var(--muted);max-width:640px}
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .skill-group{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .skill-group h3{margin-bottom:10px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 10px;font-size:14px}
+  .projects{display:grid;gap:20px}
+  .project{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+  .project .meta{color:var(--faint);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+  .project p.desc{color:var(--muted);margin:8px 0 18px;max-width:680px}
+  .metrics{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+  .metric{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+  .metric .num{font-size:20px;font-weight:800}
+  .metric .lbl{font-size:13px;color:var(--muted)}
+  .bars{max-width:520px;margin-bottom:18px}
+  .bar-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;font-size:14px}
+  .bar-row .blabel{width:170px;color:var(--muted);text-align:right;flex-shrink:0}
+  .bar-track{flex:1;background:#eef2f7;border-radius:6px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--accent);border-radius:6px}
+  .bar-fill.green{background:var(--green)}
+  .bar-val{width:64px;font-weight:700;font-size:14px}
+  .links{font-size:15px}
+  .links a{margin-right:18px}
+  .job{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin-bottom:24px}
+  .job .role{font-weight:700;font-size:18px}
+  .job .org{color:var(--muted)}
+  .job p{color:var(--muted);margin-top:6px;max-width:680px}
+  .edu{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .edu-card{border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .edu-card h3{margin-bottom:4px}
+  .edu-card .when{color:var(--faint);font-size:14px;margin-bottom:8px}
+  .edu-card p{color:var(--muted);font-size:15px}
+  .contact{background:var(--ink);color:#fff;border-radius:16px;padding:40px;text-align:center}
+  .contact h2{color:#fff}
+  .contact p{color:#cbd5e1;margin:8px auto 24px;max-width:520px}
+  .contact .btn{background:#fff;color:var(--ink)}
+  .contact .links2{margin-top:20px;font-size:15px}
+  .contact .links2 a{color:#93c5fd;margin:0 10px}
+  footer{padding:32px 0;color:var(--faint);font-size:14px;text-align:center}
+  @media(max-width:640px){
+    h1{font-size:34px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .skills,.edu{grid-template-columns:1fr}
+    nav ul{display:none}
+    .bar-row .blabel{width:120px}
+    section{padding:44px 0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#">Chetan Sawale <span>· Data Analyst</span></a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Open to Data Analyst roles · Notice period 15 days</span>
+    <h1>Turning messy data into decisions people can act on.</h1>
+    <p class="lede">Data Analyst in Mumbai. I clean, validate and analyse real business data — SQL, Python, Advanced Excel and Power BI — and I measure every model honestly, with the metric to prove it.</p>
+    <div>
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn ghost" href="https://github.com/ChetanSawale">GitHub</a>
+    </div>
+    <div class="chips" style="margin-top:24px">
+      <span class="chip">📍 <b>Mumbai</b>, Maharashtra</span>
+      <span class="chip">✉️ <a href="mailto:sawalechetan2004@gmail.com">sawalechetan2004@gmail.com</a></span>
+      <span class="chip">📞 +91 9699486717</span>
+      <span class="chip">🔗 <a href="https://www.linkedin.com/in/chetan-sawale-b86379435">LinkedIn</a></span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">5</div><div class="lbl">Analytics projects, end to end</div></div>
+      <div class="stat"><div class="num">793,609</div><div class="lbl">Transactions analysed (UK Retail)</div></div>
+      <div class="stat"><div class="num">0.841</div><div class="lbl">Best model ROC-AUC (churn)</div></div>
+      <div class="stat"><div class="num">−29%</div><div class="lbl">Forecast error cut (ATM demand)</div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <p>What I actually use, day to day — on live banking data at work and on real datasets in my projects.</p>
+    </div>
+    <div class="skills">
+      <div class="skill-group">
+        <h3>SQL &amp; Databases</h3>
+        <div class="tags"><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">Joins</span><span class="tag">Aggregations</span><span class="tag">Window queries</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Python</h3>
+        <div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">scikit-learn</span><span class="tag">Jupyter</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Excel &amp; BI</h3>
+        <div class="tags"><span class="tag">Advanced Excel</span><span class="tag">Pivot Tables</span><span class="tag">VLOOKUP / HLOOKUP</span><span class="tag">Power Query</span><span class="tag">Power BI dashboards</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Analysis &amp; Modelling</h3>
+        <div class="tags"><span class="tag">Data cleaning</span><span class="tag">EDA</span><span class="tag">Statistics</span><span class="tag">Segmentation</span><span class="tag">Logistic regression</span><span class="tag">Gradient boosting</span><span class="tag">ROC-AUC / recall / MAE / MAPE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p>Five projects, each on a real dataset, each measured with an honest metric. No toy data, no inflated claims.</p>
+    </div>
+    <div class="projects">
+
+      <article class="project">
+        <div class="meta">Python · scikit-learn · SQL</div>
+        <h3>Telecom Churn Prediction</h3>
+        <p class="desc">Which customers are about to leave — and who to save first. Logistic regression on 7,043 customers, with a concrete retention target list instead of just a score.</p>
+        <div class="metrics">
+          <div class="metric"><div class="num">0.841</div><div class="lbl">ROC-AUC</div></div>
+          <div class="metric"><div class="num">0.783</div><div class="lbl">Recall</div></div>
+          <div class="metric"><div class="num">1,783</div><div class="lbl">High-risk customers found</div></div>
+        </div>
+        <div class="bars">
+          <div class="bar-row"><span class="blabel">High-risk segment churn</span><span class="bar-track"><span class="bar-fill" style="display:block;width:62.6%"></span></span><span class="bar-val">62.6%</span></div>
+          <div class="bar-row"><span class="blabel">Overall base churn rate</span><span class="bar-track"><span class="bar-fill green" style="display:block;width:26.5%"></span></span><span class="bar-val">26.5%</span></div>
+        </div>
+        <div class="links"><a href="https://github.com/ChetanSawale/telecom-churn-prediction">View on GitHub →</a></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Python · SQL (SQLite)</div>
+        <h3>Bank Telemarketing Conversion Analysis</h3>
+        <p class="desc">What actually makes a customer say yes? 8 SQL queries and a 6-panel dashboard over 45,211 contacts — plus a leakage-free model built only on pre-call features.</p>
+        <div class="metrics">
+          <div class="metric"><div class="num">11.70%</div><div class="lbl">Overall conversion</div></div>
+          <div class="metric"><div class="num">0.773</div><div class="lbl">ROC-AUC (leakage-free)</div></div>
+          <div class="metric"><div class="num">45,211</div><div class="lbl">Contacts analysed</div></div>
+        </div>
+        <div class="bars">
+          <div class="bar-row"><span class="blabel">Prior-campaign success</span><span class="bar-track"><span class="bar-fill" style="display:block;width:64.7%"></span></span><span class="bar-val">64.7%</span></div>
+          <div class="bar-row"><span class="blabel">No prior success</span><span class="bar-track"><span class="bar-fill green" style="display:block;width:9.2%"></span></span><span class="bar-val">9.2%</span></div>
+        </div>
+        <p class="desc" style="margin-bottom:18px">Response also falls with every repeat contact — from 14.6% on the first contact to 6.4% by the fifth.</p>
+        <div class="links"><a href="https://github.com/ChetanSawale/bank-telemarketing-analysis">View on GitHub →</a></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Python · SQL</div>
+        <h3>UK Online Retail Analytics</h3>
+        <p class="desc">Cleaned and analysed 793,609 transactions into a 6-panel dashboard: revenue trends, top products and customers, and repeat-purchase behaviour.</p>
+        <div class="metrics">
+          <div class="metric"><div class="num">793,609</div><div class="lbl">Transactions</div></div>
+          <div class="metric"><div class="num">£17.69M</div><div class="lbl">Revenue analysed</div></div>
+          <div class="metric"><div class="num">6-panel</div><div class="lbl">Dashboard</div></div>
+        </div>
+        <div class="links"><a href="https://github.com/ChetanSawale/uk-online-retail-analytics">View on GitHub →</a></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Python · Gradient Boosting</div>
+        <h3>ATM Cash-Demand Forecasting</h3>
+        <p class="desc">Forecasting daily ATM withdrawals from 60 days of transactions, so cash is stocked where it is actually needed. Gradient boosting, measured against naive and moving-average baselines.</p>
+        <div class="metrics">
+          <div class="metric"><div class="num">−29%</div><div class="lbl">Forecast error vs baselines</div></div>
+          <div class="metric"><div class="num">₹14,250</div><div class="lbl">MAE</div></div>
+          <div class="metric"><div class="num">31%</div><div class="lbl">MAPE</div></div>
+        </div>
+        <div class="links"><a href="https://github.com/ChetanSawale/atm-cash-demand-forecasting">View on GitHub →</a></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Python · Pandas</div>
+        <h3>Social Buzz Data Analytics</h3>
+        <p class="desc">End-to-end pipeline — cleaning, modelling, analysis, dashboard — merging 3 datasets into one validated view.</p>
+        <div class="metrics">
+          <div class="metric"><div class="num">4,670</div><div class="lbl">Validated rows</div></div>
+          <div class="metric"><div class="num">123</div><div class="lbl">Bad records removed</div></div>
+          <div class="metric"><div class="num">3 → 1</div><div class="lbl">Datasets merged</div></div>
+        </div>
+        <div class="links"><a href="https://github.com/ChetanSawale/social-buzz-data-analytics">View on GitHub →</a></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head"><h2>Experience</h2></div>
+    <div class="job">
+      <div class="role">Reports Executive — Hitachi Cash Management Services</div>
+      <div class="org">May 2026 – Present · Mumbai</div>
+      <p>Daily quality analysis and verification of raw transaction datasets from regional endpoints, ensuring accuracy before report generation for major banking clients. Extensive data cleaning, lookups, logical filtering and validation in Advanced Excel under strict time-sensitive reporting SLAs. Building Power BI dashboards on location performance, and coordinating with location teams to fix missing attributes and resolve discrepancies.</p>
+    </div>
+    <div class="edu">
+      <div class="edu-card">
+        <h3>B.Tech, Computer Science</h3>
+        <div class="when">St. John College of Engineering and Management, University of Mumbai · 2023 – May 2026</div>
+        <p>CGPA 8.2. Diploma in Mechanical Engineering, Government Polytechnic Awasari (MSBTE), 2020 – 2023, 80%.</p>
+      </div>
+      <div class="edu-card">
+        <h3>Certifications</h3>
+        <div class="when">Anudip Foundation · Tata Group – Forage</div>
+        <p>Data Analysis Certification (Completed) — data analysis, validation, quality checks, report preparation, Excel processing. Data Visualisation: Empowering Business with Effective Insights, May 2022.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let’s talk data.</h2>
+      <p>Looking for a Data Analyst role where I can work on real business datasets — Mumbai, Pune, remote, or relocation across India. Notice period: 15 days.</p>
+      <a class="btn" href="mailto:sawalechetan2004@gmail.com">sawalechetan2004@gmail.com</a>
+      <div class="links2">
+        <a href="https://github.com/ChetanSawale">GitHub</a>
+        <a href="https://www.linkedin.com/in/chetan-sawale-b86379435">LinkedIn</a>
+        <a href="https://chetansawale.github.io/devops-portfolio-v2/">DevOps Portfolio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Chetan Sawale · Mumbai · Built with verified project results only.</div>
+</footer>
+</body>
+</html>
